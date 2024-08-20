@@ -1,0 +1,77 @@
+<!--
+ Copyright (c) 2014, 2024, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding">
+  <oj-c-form-layout id="ofl1" label-edge="inside" colspan-wrap="[[colspanWrap]]" max-columns="1" direction="row">
+  <div>
+    <h2>Enter text</h2>
+     <oj-c-input-text
+              id="text-input"
+              raw-value="{{username}}"
+              label-hint="Username"
+              label-edge="inside">
+       </oj-c-input-text>
+    <h3>Hello <oj-bind-text value="[[username]]"/></h3>
+  </div>
+    
+
+  <div>
+    
+    <h2>Enter password</h2>
+   <div class="oj-flex oj-sm-padding-2x-vertical">
+    <div class="oj-sm-12 oj-md-6 oj-lg-6 oj-flex-item oj-sm-padding-2x-horizontal">
+      <oj-c-input-password
+        id="enabled1"
+        value="{{password}}"
+        label-hint="enabled"
+        label-edge="inside">
+      </oj-c-input-password>
+    </div>
+   </div>
+  </div>
+  <div>
+    <oj-checkboxset id="enabledCheckboxset" value='["laptop","tablet"]' label-hint="Enabled">
+      <oj-option value="desktop">Desktop</oj-option>
+      <oj-option value="laptop">Laptop</oj-option>
+      <oj-option value="tablet">Tablet</oj-option>
+    </oj-checkboxset>
+  </div>
+    <div>
+      <h2>Date Text</h2>
+      <oj-c-input-date-text label-hint="Date" id="date" class="oj-form-control-max-width-md" value="{{value}}">
+      </oj-c-input-date-text>
+    </div>
+    <div>
+      <oj-c-progress-bar class="oj-sm-margin-4x-bottom demo-width" id="progressBar" aria-labelledby="detLabel"
+      value="[[progressValue]]"></oj-c-progress-bar>
+
+    </div>
+    <div>
+      <oj-radioset id="enabledRadioset" value="laptop" label-hint="Enabled">
+        <oj-option value="desktop">Desktop</oj-option>
+        <oj-option value="laptop">Laptop</oj-option>
+        <oj-option value="tablet">Tablet</oj-option>
+      </oj-radioset>
+    </div>
+      
+      
+      
+      
+      
+      <div>
+        <oj-button id="button1" on-oj-action="[[buttonAction]]">Button</oj-button>
+
+      </div>
+  
+      <div>
+        <oj-messages class="oj-color-invert" messages="[[messagesDataprovider]]" position="{}" display="notification"
+        display-options.category="none">
+      </oj-messages>
+      </div>
+      <oj-select-single id="select1" label-hint="Dropdown box" label-edge="inside"
+        class="oj-form-control-max-width-md" data="[[browsersDP]]" value="{{selectVal}}"></oj-select-single>
+    
+  </oj-c-form-layout>
+</div>
